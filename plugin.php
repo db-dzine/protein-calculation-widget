@@ -14,7 +14,7 @@
  * Plugin Name:       Protein_Calculation
  * Plugin URI:        http://www.db-dzine.de
  * Description:       Widget for protein calculation
- * Version:           0.0.9
+ * Version:           1.0.2
  * Author:            Daniel Barenkamp
  * Author URI:        http://www.db-dzine.de
  * Text Domain:       protein-calculation-widget

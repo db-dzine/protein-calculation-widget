@@ -36,7 +36,7 @@ class Smashing_Updater {
 	        }        
 	        
 	        $response = json_decode( wp_remote_retrieve_body( wp_remote_get( $request_uri ) ), true ); // Get JSON and parse it
-	        
+
 	        if( is_array( $response ) ) { // If it is an array
 	            $response = current( $response ); // Get the first item
 	        }
@@ -54,13 +54,11 @@ class Smashing_Updater {
 		add_filter( 'upgrader_post_install', array( $this, 'after_install' ), 10, 3 );
 	}
 	public function modify_transient( $transient ) {
-		
 		if( property_exists( $transient, 'checked') ) { // Check if transient has a checked property
 			
 			if( $checked = $transient->checked ) { // Did Wordpress check for updates?
 	
 				$this->get_repository_info(); // Get the repo info
-	
 				$out_of_date = version_compare( $this->github_response['tag_name'], $checked[ $this->basename ], 'gt' ); // Check if we're out of date
 	
 				if( $out_of_date ) {
