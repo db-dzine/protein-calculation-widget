@@ -14,7 +14,7 @@
  * Plugin Name:       Protein_Calculation
  * Plugin URI:        http://www.db-dzine.de
  * Description:       Widget for protein calculation
- * Version:           1.0.0
+ * Version:           0.0.9
  * Author:            Daniel Barenkamp
  * Author URI:        http://www.db-dzine.de
  * Text Domain:       protein-calculation-widget
@@ -268,8 +268,9 @@ class Protein_Calculation extends WP_Widget {
 
 } // end class
 
-include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
-
+if( ! class_exists( 'Smashing_Updater' ) ){
+	include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
+}
 $updater = new Smashing_Updater( __FILE__ );
 $updater->set_username( 'db-dzine' );
 $updater->set_repository( 'protein-calculation-widget' );
