@@ -262,7 +262,7 @@ class Protein_Calculation extends WP_Widget {
 	 */
 	public function register_widget_scripts() {
 		wp_enqueue_script( $this->get_widget_slug().'-magnific-popup', plugins_url( 'js/jquery.magnific-popup.min.js', __FILE__ ), array('jquery') );
-		wp_enqueue_script( $this->get_widget_slug().'-script', plugins_url( 'js/widget.js', __FILE__ ), array('jquery') );
+		wp_enqueue_script( $this->get_widget_slug().'-script', plugins_url( 'js/widget.min.js', __FILE__ ), array('jquery') );
 
 	} // end register_widget_scripts
 

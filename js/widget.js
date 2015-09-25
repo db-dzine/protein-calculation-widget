@@ -23,7 +23,7 @@
 				if(typVal == "aufbau" || typVal == "diaet"){
 					kfaContainer.show();
 					if(kfaVal == ""){
-						ergebnis.html("Bitte Körperfettanteil angeben!");
+						ergebnis.html('<span style="color: red">Bitte Körperfettanteil angeben!</span>');
 						return true;
 					}
 					gewichtVal = ((100 - kfaVal)/100) * gewichtVal;
@@ -46,11 +46,8 @@
 				if(typVal == "diaet"){
 					faktor = 2.5;
 				}
-				console.log(faktor);
-				console.log(gewichtVal);
 				ergebnisBerechnung = faktor * gewichtVal;
-				ergebnisBerechnung = ergebnisBerechnung.toFixed(2);
-				console.log(ergebnisBerechnung);
+				ergebnisBerechnung = ergebnisBerechnung.toFixed(2)+" g Protein / pro Tag";
 
 				ergebnis.html(ergebnisBerechnung);
 			});

@@ -19,7 +19,7 @@ $html .= '<div class="widget-content clearfix">
 <input name="'.$this->get_widget_slug().'-kfa" id="'.$this->get_widget_slug().'-kfa" type="text"><br/>
 </div></div>';
 $html .= '<div class="widget-content clearfix">
-<h4>Ihr Ergebnis: <span id="'.$this->get_widget_slug().'-ergebnis"></span>g Protein / pro Tag</h4><br/>
+<h4>Ihr Ergebnis: <span id="'.$this->get_widget_slug().'-ergebnis"></span></h4><br/>
 Zur Verfügung gestellt von <a target="_blank" href="http://protein.de">protein.de</a>
 </div>';
 
